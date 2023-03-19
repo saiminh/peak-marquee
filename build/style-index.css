@@ -1,1 +1,66 @@
-.peak-marquee{--marqueeTotalWidth:0;display:flex;gap:0;overflow:hidden;position:relative;width:100%}.peak-marquee:after,.peak-marquee:before{border-top:1px solid var(--wp--preset--color--contrast,#000);content:"";display:block;height:1px;margin:0 var(--wp--preset--spacing--outer,18px);position:absolute;width:calc(100% - var(--wp--preset--spacing--outer, 18px)*2)}.peak-marquee:after{bottom:0}.peak-marquee>.peak-marquee-headline{box-sizing:border-box;flex:0 0 auto}.peak-marquee>.peak-marquee-headline>h2{border-right:1px solid var(--wp--preset--color--contrast,#000);box-sizing:border-box;margin:.5em;padding-left:1em;padding-right:1em;position:relative}.peak-marquee>.peak-marquee-headline>h2:before{content:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2734.414%27 height=%2734.645%27%3E%3Cg data-name=%27Group 219%27 fill=%27none%27 stroke=%27%2331ff3f%27 stroke-linecap=%27round%27 stroke-width=%272%27%3E%3Cpath data-name=%27Line 106%27 d=%27M1 18.528h31.559%27/%3E%3Cpath data-name=%27Path 268%27 d=%27M17.122 1.413 33 18.626 17.122 33.232%27/%3E%3C/g%3E%3C/svg%3E");height:1em;left:0;position:absolute;width:auto}@keyframes marquee{0%{transform:translateX(0)}to{transform:translateX(calc(var(--marqueeTotalWidth)*-1))}}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.peak-marquee {
+  --marqueeTotalWidth: 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.peak-marquee:before, .peak-marquee:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  width: calc(100% - 2 * var(--wp--preset--spacing--outer, 18px));
+  margin: 0 var(--wp--preset--spacing--outer, 18px);
+  border-top: 1px solid var(--wp--preset--color--contrast, #000);
+}
+.peak-marquee:after {
+  bottom: 0;
+}
+.peak-marquee .peak-marquee-inner {
+  display: flex;
+  gap: 0;
+  flex-wrap: nowrap;
+}
+.peak-marquee .peak-marquee-headline {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+.peak-marquee .peak-marquee-headline > h2 {
+  position: relative;
+  padding-left: 1.25em;
+  padding-right: 1em;
+  border-right: 1px solid var(--wp--preset--color--contrast, #000);
+  box-sizing: border-box;
+  margin: 0.5em;
+}
+.peak-marquee .peak-marquee-headline > h2:before {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg className=%27arrow%27 xmlns=%27http://www.w3.org/2000/svg%27 width=%2734.414%27 height=%2734.645%27 viewBox=%270 0 34.414 34.645%27%3E%3Cg id=%27Group_219%27 data-name=%27Group 219%27 transform=%27translate%281 1.413%29%27%3E%3Cline id=%27Line_106%27 data-name=%27Line 106%27 x2=%2731.559%27 transform=%27translate%280 17.115%29%27 fill=%27none%27 stroke=%27%2331ff3f%27 stroke-linecap=%27round%27 stroke-width=%272%27/%3E%3Cpath id=%27Path_268%27 data-name=%27Path 268%27 d=%27M0,15.878,17.213,0,31.819,15.878%27 transform=%27translate%2832 0%29 rotate%2890%29%27 fill=%27none%27 stroke=%27%2331ff3f%27 stroke-linecap=%27round%27 stroke-width=%272%27/%3E%3C/g%3E%3C/svg%3E");
+  width: 1em;
+  height: 1em;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 80%;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--marqueeTotalWidth)));
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

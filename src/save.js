@@ -5,17 +5,19 @@ export default function save({ attributes }) {
 		<div { ...useBlockProps.save(
       { className: 'peak-marquee' }
     ) }>
-      { attributes.marquee.map( (marqueeItem, index) => {
-        return (
-          <div key={index} className="peak-marquee-headline">
-            <RichText.Content
-              tagName="h2"
-              className="peak-marquee-item"
-              value={ marqueeItem.content }
-            />
-          </div>
-        )
-      })}
+      <div className="peak-marquee-inner">
+        { attributes.marquee.map( (marqueeItem, index) => {
+          return (
+            <div key={index} className="peak-marquee-headline">
+                <RichText.Content
+                  tagName="h2"
+                  className="peak-marquee-item"
+                  value={ marqueeItem.content }
+                />
+            </div>
+          )
+        })}
+      </div>
 		</div>
 	);
 }
