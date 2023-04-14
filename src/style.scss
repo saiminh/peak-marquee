@@ -19,6 +19,7 @@
     width: calc(100% - 2 * var(--wp--preset--spacing--outer, 18px) );
     margin: 0 var(--wp--preset--spacing--outer, 18px);
     border-top: 1px solid var(--wp--preset--color--contrast, #000);
+    bottom: calc(100% - .5em);
   }
   &:after {
     bottom: 0;
@@ -41,6 +42,7 @@
       border-right: 1px solid var(--wp--preset--color--contrast, #000);
       box-sizing: border-box;
       margin: .5em;
+
       &:before {
         content: '';
         background-image: url("data:image/svg+xml,%3Csvg className='arrow' xmlns='http://www.w3.org/2000/svg' width='34.414' height='34.645' viewBox='0 0 34.414 34.645'%3E%3Cg id='Group_219' data-name='Group 219' transform='translate(1 1.413)'%3E%3Cline id='Line_106' data-name='Line 106' x2='31.559' transform='translate(0 17.115)' fill='none' stroke='%2331ff3f' stroke-linecap='round' stroke-width='2'/%3E%3Cpath id='Path_268' data-name='Path 268' d='M0,15.878,17.213,0,31.819,15.878' transform='translate(32 0) rotate(90)' fill='none' stroke='%2331ff3f' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
@@ -50,6 +52,7 @@
         background-position: 50% 50%;
         background-size: 80%;
         position: absolute;
+        top: .1333em;
         left: 0;
       }
     }
